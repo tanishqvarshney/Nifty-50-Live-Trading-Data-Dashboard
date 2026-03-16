@@ -2,8 +2,6 @@
 
 A modern, high-performance trading dashboard built with **Next.js 14**, **Tailwind CSS**, and **Framer Motion**. This application simulates a real-time market environment with live-updating Nifty 50 stock data, interactive charts, and a premium dark-mode aesthetic.
 
-![Reference UI Overview](./public/assets/gammaflow_landing_full_1773658915894.png)
-
 ---
 
 ## 🚀 Live Demo Recording
@@ -29,10 +27,10 @@ Watch the dashboard in action below. Note the real-time price fluctuations and a
 
 ## 🛠️ Technical Stack
 
-- **Framework**: [Next.js 14](https://nextjs.org/) (App Router, TypeScript)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
-- **Visuals**: [Recharts](https://recharts.org/) & [Lucide Icons](https://lucide.dev/)
-- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Framework**: [Next.js 14] (App Router, TypeScript)
+- **Styling**: [Tailwind CSS]
+- **Visuals**: [Recharts] & [Lucide Icons]
+- **Animations**: [Framer Motion]
 - **State/Fetching**: Axios with custom React Hooks
 
 ---
