@@ -27,10 +27,10 @@ Watch the dashboard in action below. Note the real-time price fluctuations and a
 
 ## 🛠️ Technical Stack
 
-- **Framework**: [Next.js 14] (App Router, TypeScript)
-- **Styling**: [Tailwind CSS]
-- **Visuals**: [Recharts] & [Lucide Icons]
-- **Animations**: [Framer Motion]
+- **Framework**: Next.js 14 (App Router, TypeScript)
+- **Styling**: Tailwind CSS
+- **Visuals**: Recharts & Lucide Icons
+- **Animations**: Framer Motion
 - **State/Fetching**: Axios with custom React Hooks
 
 ---
