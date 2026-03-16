@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📈 Nifty 50 Live Trading Data Dashboard
 
-## Getting Started
+A modern, high-performance trading dashboard built with **Next.js 14**, **Tailwind CSS**, and **Framer Motion**. This application simulates a real-time market environment with live-updating Nifty 50 stock data, interactive charts, and a premium dark-mode aesthetic.
 
-First, run the development server:
+![Reference UI Overview](./public/assets/gammaflow_landing_full_1773658915894.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Live Demo Recording
+Watch the dashboard in action below. Note the real-time price fluctuations and automatic 10-second refreshes.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+![Dashboard Preview](./public/assets/verify_dashboard_1773659368764.webp)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## ✨ Features
 
-To learn more about Next.js, take a look at the following resources:
+- **⚡ Real-time Updates**: Data polls every 10 seconds to simulate a live trading floor.
+- **📊 Market Overview**: Instant visualization of Nifty 50 Index value, absolute change, and percent change.
+- **📑 Dynamic Stock Table**: 
+  - Tracks all top Nifty 50 constituents.
+  - Interactive sorting by Price, Change, and Volume.
+  - Color-coded indicators for green (gainers) and red (losers).
+- **📈 Intraday Trend Chart**: Smooth area chart visualizing price movement using **Recharts**.
+- **📱 Responsive Design**: Fully optimized for Desktop, Tablet, and Mobile.
+- **🎨 Premium UX**: Dark mode first design, smooth transitions, and high-quality typography.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🛠️ Technical Stack
 
-## Deploy on Vercel
+- **Framework**: [Next.js 14](https://nextjs.org/) (App Router, TypeScript)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Visuals**: [Recharts](https://recharts.org/) & [Lucide Icons](https://lucide.dev/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **State/Fetching**: Axios with custom React Hooks
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🚦 Getting Started
+
+### Prerequisites
+- Node.js 18.x or later
+- npm or yarn
+
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/tanishqvarshney/Nifty-50-Live-Trading-Data-Dashboard.git
+   cd nifty-dashboard
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) inside your browser.
+
+---
+
+## ☁️ Deployment
+This project is optimized for **Vercel**. 
+
+1. Push your code to GitHub.
+2. Link the repository to your Vercel project.
+3. Click **Deploy**.
+
+---
+
+## 📄 License
+This project is for educational purposes only. Market data is simulated for demonstration.
