@@ -8,7 +8,25 @@ A modern, high-performance trading dashboard built with **Next.js 14**, **Tailwi
 ## 🚀 Live Demo Recording
 Watch the dashboard in action below. Note the real-time price fluctuations and automatic 10-second refreshes.
 
+![Dashboard Overview](./public/assets/dashboard_main.png)
+<br/>
+
+---
+
+## 🚀 Live Demo Recording
+Watch the dashboard in action below!
+
 ![Dashboard Preview](./public/assets/verify_dashboard_1773659368764.webp)
+
+---
+
+## 📸 Screenshots
+
+### Market Overview & Trend Chart
+![Main Dashboard](./public/assets/dashboard_main.png)
+
+### Stock Constituents Table
+![Stock Table](./public/assets/dashboard_table.png)
 
 ---
 
