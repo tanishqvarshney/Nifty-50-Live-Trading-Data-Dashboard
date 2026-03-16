@@ -21,7 +21,7 @@ export const Header = () => {
           <h1 className="text-2xl font-bold text-white tracking-tight">
             Nifty 50 <span className="text-teal-400">Live Dashboard</span>
           </h1>
-          <p className="text-zinc-500 text-sm font-medium">Real-time market analytics</p>
+          <p className="text-zinc-500 text-sm font-medium">Real-time market analytics by Tanishq Varshney</p>
         </div>
       </div>
       

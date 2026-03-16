@@ -1,4 +1,5 @@
 # 📈 Nifty 50 Live Trading Data Dashboard
+### Developed by Tanishq Varshney
 
 A modern, high-performance trading dashboard built with **Next.js 14**, **Tailwind CSS**, and **Framer Motion**. This application simulates a real-time market environment with live-updating Nifty 50 stock data, interactive charts, and a premium dark-mode aesthetic.
 

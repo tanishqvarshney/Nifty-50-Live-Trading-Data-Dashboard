@@ -46,7 +46,7 @@ export default function Home() {
 
       <footer className="py-8 px-4 md:px-8 border-t border-zinc-800 mt-8">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-zinc-500 text-sm">
-          <div>© 2026 Nifty 50 Live Dashboard. For educational purposes only.</div>
+          <div>© 2026 Nifty 50 Live Dashboard. Developed by <span className="text-teal-400 font-medium">Tanishq Varshney</span></div>
           <div className="flex gap-6">
             <a href="#" className="hover:text-teal-400 transition-colors">Privacy</a>
             <a href="#" className="hover:text-teal-400 transition-colors">Terms</a>
