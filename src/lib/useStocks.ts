@@ -7,9 +7,16 @@ export interface Stock {
   symbol: string;
   name: string;
   price: number;
+  open: number;
+  high: number;
+  low: number;
+  prevClose: number;
+  high52w: number;
+  low52w: number;
   change: number;
   percentChange: number;
   volume: number;
+  logo: string;
   lastUpdated: string;
 }
 

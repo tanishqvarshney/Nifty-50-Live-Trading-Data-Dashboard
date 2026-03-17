@@ -55,14 +55,24 @@ const generateHistoricalData = (currentPrice: number, timeframe: string) => {
 };
 
 // Initial state (simulating real base prices)
-let stockData = NIFTY_STOCKS.map((stock, index) => ({
-  ...stock,
-  price: 2500 + index * 150,
-  change: 0,
-  percentChange: 0,
-  volume: Math.floor(Math.random() * 1000000) + 500000,
-  lastUpdated: new Date().toISOString(),
-}));
+let stockData = NIFTY_STOCKS.map((stock, index) => {
+  const basePrice = 2500 + index * 150;
+  return {
+    ...stock,
+    price: basePrice,
+    open: basePrice - (Math.random() * 10),
+    high: basePrice + (Math.random() * 20),
+    low: basePrice - (Math.random() * 20),
+    prevClose: basePrice - (Math.random() * 15),
+    high52w: basePrice * 1.2,
+    low52w: basePrice * 0.8,
+    change: 0,
+    percentChange: 0,
+    volume: Math.floor(Math.random() * 1000000) + 500000,
+    logo: `https://logo.clearbit.com/${stock.symbol.toLowerCase()}.com`, // Fallback/demo logos
+    lastUpdated: new Date().toISOString(),
+  };
+});
 
 let niftyIndex = {
   price: 19500,
@@ -78,12 +88,14 @@ export async function GET(request: NextRequest) {
   // Update data to simulate live market
   stockData = stockData.map((stock) => {
     const newPrice = getFluctuatedPrice(stock.price);
-    const change = newPrice - (stock.price - stock.change);
-    const percentChange = (change / (newPrice - change)) * 100;
+    const change = newPrice - stock.prevClose;
+    const percentChange = (change / stock.prevClose) * 100;
     
     return {
       ...stock,
       price: Number(newPrice.toFixed(2)),
+      high: Math.max(stock.high, newPrice),
+      low: Math.min(stock.low, newPrice),
       change: Number(change.toFixed(2)),
       percentChange: Number(percentChange.toFixed(2)),
       lastUpdated: new Date().toISOString(),
