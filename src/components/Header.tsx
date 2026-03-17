@@ -5,9 +5,29 @@ import { TrendingUp, RefreshCw, Clock } from 'lucide-react';
 
 export const Header = () => {
   const [time, setTime] = useState(new Date());
+  const [isMarketOpen, setIsMarketOpen] = useState(true);
 
   useEffect(() => {
-    const timer = setInterval(() => setTime(new Date()), 1000);
+    const timer = setInterval(() => {
+      const now = new Date();
+      setTime(now);
+      
+      // Calculate IST time (UTC+5:30)
+      const istTime = new Date(now.toLocaleString('en-US', { timeZone: 'Asia/Kolkata' }));
+      const day = istTime.getDay();
+      const hours = istTime.getHours();
+      const minutes = istTime.getMinutes();
+      
+      const currentTimeInMinutes = hours * 60 + minutes;
+      const marketOpenTime = 9 * 60 + 15;
+      const marketCloseTime = 15 * 60 + 30;
+      
+      const isOpen = day >= 1 && day <= 5 && 
+                    currentTimeInMinutes >= marketOpenTime && 
+                    currentTimeInMinutes <= marketCloseTime;
+                    
+      setIsMarketOpen(isOpen);
+    }, 1000);
     return () => clearInterval(timer);
   }, []);
 
@@ -32,8 +52,10 @@ export const Header = () => {
         </div>
         <div className="h-4 w-[1px] bg-zinc-800 hidden md:block" />
         <div className="flex items-center gap-2">
-          <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-          <span className="text-xs font-bold text-emerald-500 uppercase tracking-wider">Market Open</span>
+          <div className={`w-2 h-2 rounded-full ${isMarketOpen ? 'bg-emerald-500 animate-pulse' : 'bg-rose-500'}`} />
+          <span className={`text-xs font-bold uppercase tracking-wider ${isMarketOpen ? 'text-emerald-500' : 'text-rose-500'}`}>
+            Market {isMarketOpen ? 'Open' : 'Closed'}
+          </span>
         </div>
       </div>
     </header>
