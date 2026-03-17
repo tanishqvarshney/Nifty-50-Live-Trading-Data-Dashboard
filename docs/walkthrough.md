@@ -15,8 +15,8 @@ I have successfully built and verified the Nifty 50 Live Trading Data Dashboard.
 ### 1. Functionality Check
 - [x] **Data Refresh**: Confirmed that price values and timestamps update every 10 seconds.
 - [x] **Sorting**: Verified sorting by clicking on table headers.
-### 2. Detailed Market Stats & Branding
-![Nifty 50 Table with Logos and Stats](/Users/tanishqvarshney/.gemini/antigravity/brain/1261d24d-b16f-4259-a0d3-9478ba97ca23/nifty_50_table_verification.png)
+### 2. Detailed Market Stats & Official Logos
+![Nifty 50 Constituents with Official Logos](/Users/tanishqvarshney/.gemini/antigravity/brain/1261d24d-b16f-4259-a0d3-9478ba97ca23/nifty_constituents_logos_verification.png)
 
 ### 3. Verification Recording
 ![Nifty 50 Dashboard Verification Recording](../public/assets/verify_dashboard_1773659368764.webp)

@@ -2,16 +2,16 @@ import { NextResponse, NextRequest } from 'next/server';
 
 // Top 10 Nifty 50 stocks for demonstration
 const NIFTY_STOCKS = [
-  { symbol: 'RELIANCE', name: 'Reliance Industries' },
-  { symbol: 'TCS', name: 'Tata Consultancy Services' },
-  { symbol: 'HDFCBANK', name: 'HDFC Bank' },
-  { symbol: 'ICICIBANK', name: 'ICICI Bank' },
-  { symbol: 'INFY', name: 'Infosys' },
-  { symbol: 'HUL', name: 'Hindustan Unilever' },
-  { symbol: 'ITC', name: 'ITC Limited' },
-  { symbol: 'SBIN', name: 'State Bank of India' },
-  { symbol: 'BHARTIARTL', name: 'Bharti Airtel' },
-  { symbol: 'L&T', name: 'Larsen & Toubro' },
+  { symbol: 'RELIANCE', name: 'Reliance Industries', domain: 'ril.com' },
+  { symbol: 'TCS', name: 'Tata Consultancy Services', domain: 'tcs.com' },
+  { symbol: 'HDFCBANK', name: 'HDFC Bank', domain: 'hdfcbank.com' },
+  { symbol: 'ICICIBANK', name: 'ICICI Bank', domain: 'icicibank.com' },
+  { symbol: 'INFY', name: 'Infosys', domain: 'infosys.com' },
+  { symbol: 'HUL', name: 'Hindustan Unilever', domain: 'hul.co.in' },
+  { symbol: 'ITC', name: 'ITC Limited', domain: 'itcportal.com' },
+  { symbol: 'SBIN', name: 'State Bank of India', domain: 'sbi.co.in' },
+  { symbol: 'BHARTIARTL', name: 'Bharti Airtel', domain: 'airtel.in' },
+  { symbol: 'L&T', name: 'Larsen & Toubro', domain: 'larsentoubro.com' },
 ];
 
 const SECTORS = [
@@ -69,7 +69,7 @@ let stockData = NIFTY_STOCKS.map((stock, index) => {
     change: 0,
     percentChange: 0,
     volume: Math.floor(Math.random() * 1000000) + 500000,
-    logo: `https://logo.clearbit.com/${stock.symbol.toLowerCase()}.com`, // Fallback/demo logos
+    logo: `https://t3.gstatic.com/faviconV2?url=https://${stock.domain}&client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&size=128`, // Reliable official logos via Google
     lastUpdated: new Date().toISOString(),
   };
 });
