@@ -4,22 +4,23 @@ I have successfully built and verified the Nifty 50 Live Trading Data Dashboard.
 
 ## Key Features Implemented
 
-- **Live Data Polling**: Fetches market data every 10 seconds from a simulated backend API (designed for easy integration with Alpha Vantage/NSE).
-- **Market Overview**: Real-time display of Nifty 50 index value, daily absolute change, and percentage change.
-- **Interactive Stock Table**: Lists Nifty 50 constituent stocks with sorting by Price, Change, and % Change.
-- **Intraday Trend Chart**: Dynamic area chart showing price movements over time using Recharts.
-- **Premium Design**: Dark mode aesthetic with teal accents, smooth animations (Framer Motion), and responsive layout.
+- **Live Data Polling**: Fetches market data every 10 seconds from a simulated backend API.
+- **Multi-Timeframe Charts**: Interactive performance charts for 1D, 1W, 1M, 3M, and 1Y periods.
+- **Market Pulse Section**: Real-time Top Gainers, Top Losers, and Market Heat/Sentiment barometer.
+- **Market Overview**: Real-time display of Nifty 50 index value and daily changes.
+- **Premium Design**: Dark mode aesthetic with teal accents and responsive layout.
 
 ## Verification Results
 
 ### 1. Functionality Check
 - [x] **Data Refresh**: Confirmed that price values and timestamps update every 10 seconds.
 - [x] **Sorting**: Verified sorting by clicking on table headers.
-- [x] **Charts**: Trend chart updates dynamically as data changes.
-- [x] **Responsive UI**: Verified the layout adapts correctly to mobile and desktop screen sizes.
+### 2. Enhanced UI/UX
+![Enhanced Nifty 50 Dashboard](/Users/tanishqvarshney/.gemini/antigravity/brain/1261d24d-b16f-4259-a0d3-9478ba97ca23/new_dashboard_verify_1773730655874.png)
 
-### 2. UI/UX Recording
-![Nifty 50 Dashboard Verification Recording](/Users/tanishqvarshney/.gemini/antigravity/brain/1261d24d-b16f-4259-a0d3-9478ba97ca23/verify_dashboard_1773659368764.webp)
+### 3. Verification Recording
+![Nifty 50 Dashboard Verification Recording](../public/assets/verify_dashboard_1773659368764.webp)
+mini/antigravity/brain/1261d24d-b16f-4259-a0d3-9478ba97ca23/verify_dashboard_1773659368764.webp)
 
 ## Technical Stack
 - **Frontend**: Next.js 14 (App Router), TypeScript, Tailwind CSS

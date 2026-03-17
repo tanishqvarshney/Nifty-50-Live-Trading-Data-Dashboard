@@ -25,12 +25,11 @@ Watch the dashboard in action below!
 ## ✨ Features
 
 - **⚡ Real-time Updates**: Data polls every 10 seconds to simulate a live trading floor.
+- **📈 Multi-Timeframe Charts**: Supports 1D, 1W, 1M, 3M, and 1Y views with interactive selectors.
+- **💓 Market Pulse**: 
+  - Real-time Top Gainers & Losers identification.
+  - Market Heat Barometer (Bullish/Bearish sentiment).
 - **📊 Market Overview**: Instant visualization of Nifty 50 Index value, absolute change, and percent change.
-- **📑 Dynamic Stock Table**: 
-  - Tracks all top Nifty 50 constituents.
-  - Interactive sorting by Price, Change, and Volume.
-  - Color-coded indicators for green (gainers) and red (losers).
-- **📈 Intraday Trend Chart**: Smooth area chart visualizing price movement using **Recharts**.
 - **📱 Responsive Design**: Fully optimized for Desktop, Tablet, and Mobile.
 - **🎨 Premium UX**: Dark mode first design, smooth transitions, and high-quality typography.
 
