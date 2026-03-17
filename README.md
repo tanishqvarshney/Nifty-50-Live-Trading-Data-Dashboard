@@ -8,7 +8,7 @@ A modern, high-performance trading dashboard built with **Next.js 14**, **Tailwi
 ## 🚀 Live Demo Recording
 Watch the dashboard in action below!
 
-![Dashboard Preview](./public/assets/verify_dashboard_1773659368764.webp)
+![Dashboard Preview](./public/assets/vid.mov)
 
 ---
 
