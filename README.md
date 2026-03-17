@@ -14,11 +14,14 @@ Watch the dashboard in action below!
 
 ## 📸 Screenshots
 
-### Market Overview & Trend Chart
-![Main Dashboard](./public/assets/dashboard_main.png)
+### 1. Full Dashboard Overview
+![Full Dashboard](./public/assets/dashboard_overview.png)
 
-### Stock Constituents Table
-![Stock Table](./public/assets/dashboard_table.png)
+### 2. Market Performance & pulse
+![Market Performance](./public/assets/market_performance.png)
+
+### 3. Nifty 50 Constituents Table
+![Stock Table](./public/assets/stock_constituents.png)
 
 ---
 
