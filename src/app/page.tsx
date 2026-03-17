@@ -4,11 +4,12 @@ import { Header } from '@/components/Header';
 import { MarketOverview } from '@/components/MarketOverview';
 import { StockTable } from '@/components/StockTable';
 import { MarketChart } from '@/components/MarketChart';
+import { MarketPulse } from '@/components/MarketPulse';
 import { useStocks } from '@/lib/useStocks';
 import { AlertCircle, RefreshCw } from 'lucide-react';
 
 export default function Home() {
-  const { data, loading, error, refresh } = useStocks();
+  const { data, loading, error, refresh, timeframe, setTimeframe } = useStocks();
 
   if (error) {
     return (
@@ -35,11 +36,17 @@ export default function Home() {
     <main className="min-h-screen bg-black text-white selection:bg-teal-500/30">
       <Header />
       
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto px-4 md:px-0">
         <MarketOverview data={data?.niftyIndex || null} loading={loading && !data} />
         
+        <MarketPulse data={data?.marketPulse} loading={loading && !data} />
+        
         <div className="grid grid-cols-1 gap-0">
-          <MarketChart price={data?.niftyIndex.price || 19500} />
+          <MarketChart 
+            data={data?.chartData || []} 
+            timeframe={timeframe}
+            onTimeframeChange={setTimeframe}
+          />
           <StockTable stocks={data?.stocks || []} loading={loading && !data} />
         </div>
       </div>

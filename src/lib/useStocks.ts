@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-interface Stock {
+export interface Stock {
   symbol: string;
   name: string;
   price: number;
@@ -13,7 +13,7 @@ interface Stock {
   lastUpdated: string;
 }
 
-interface MarketData {
+export interface MarketData {
   niftyIndex: {
     price: number;
     change: number;
@@ -21,21 +21,29 @@ interface MarketData {
     lastUpdated: string;
   };
   stocks: Stock[];
+  chartData: Array<{ time: string, price: number }>;
+  marketPulse: {
+    topGainers: Stock[];
+    topLosers: Stock[];
+    advancing: number;
+    declining: number;
+    sectors: Array<{ name: string, price: string, change: number, percentChange: number }>;
+  };
 }
 
 export const useStocks = () => {
   const [data, setData] = useState<MarketData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [timeframe, setTimeframe] = useState('1D');
 
   const fetchData = async () => {
     try {
-      const response = await axios.get('/api/stocks');
+      const response = await axios.get(`/api/stocks?timeframe=${timeframe}`);
       setData(response.data);
       setError(null);
     } catch (err) {
       console.error('Failed to fetch stocks:', err);
-      // Fallback to error state only if we have no data at all
       if (!data) setError('Failed to load market data');
     } finally {
       setLoading(false);
@@ -46,7 +54,7 @@ export const useStocks = () => {
     fetchData();
     const interval = setInterval(fetchData, 10000); // 10 seconds
     return () => clearInterval(interval);
-  }, []);
+  }, [timeframe]); // Re-fetch when timeframe changes
 
-  return { data, loading, error, refresh: fetchData };
+  return { data, loading, error, refresh: fetchData, timeframe, setTimeframe };
 };
