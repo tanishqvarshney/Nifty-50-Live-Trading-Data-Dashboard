@@ -20,7 +20,6 @@ I have successfully built and verified the Nifty 50 Live Trading Data Dashboard.
 
 ### 3. Verification Recording
 ![Nifty 50 Dashboard Verification Recording](../public/assets/verify_dashboard_1773659368764.webp)
-mini/antigravity/brain/1261d24d-b16f-4259-a0d3-9478ba97ca23/verify_dashboard_1773659368764.webp)
 
 ## Technical Stack
 - **Frontend**: Next.js 14 (App Router), TypeScript, Tailwind CSS
